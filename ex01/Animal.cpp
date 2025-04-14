@@ -20,4 +20,4 @@ std::string Animal::getType() const{
 
 void Animal::makeSound() const{
         std::cout << "Some animal sound!" << std::endl; 
-    }
+}

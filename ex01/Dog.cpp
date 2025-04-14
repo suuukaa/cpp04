@@ -1,23 +1,32 @@
 #include "Dog.hpp"
 
-#include "Dog.hpp"
-
 Dog::Dog(){
+    DogBrain = new Brain();
     type = "Dog";
 }
 
 Dog::Dog(const Dog &copy){
+    DogBrain = new Brain(*copy.DogBrain);
     type = copy.type;
 }
 
-Dog::~Dog(){}
+Dog::~Dog(){
+    delete DogBrain;
+}
 
 Dog &Dog::operator=(const Dog &copy){
-    if (this != &copy)
+    if (this != &copy){
+        delete DogBrain;
+        DogBrain = new Brain(*copy.DogBrain);
         type = copy.type;
+    }
     return *this;
 }
 
 void Dog::makeSound(){ 
         std::cout << "Hooooooooooooooow!" << std::endl; 
-    }
+}
+
+Brain *Dog::getBrain() const{
+    return DogBrain;
+}
