@@ -2,13 +2,13 @@ NAME = ex00
 CC = c++ -std=c++98
 CFLAGS =  -Wall -Wextra -Werror
 
-SRC = Animal.cpp dog.cpp Cat.cpp main.cpp
+SRC = Animal.cpp Dog.cpp Cat.cpp main.cpp WrongAnimal.cpp WrongCat.cpp
 
 all: $(NAME)
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o: %.cpp Animal.hpp dog.hpp Cat.hpp
+%.o: %.cpp Animal.hpp dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
