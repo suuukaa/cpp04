@@ -17,7 +17,3 @@ Animal &Animal::operator=(const Animal &copy){
 std::string Animal::getType() const{
     return type;
 }
-
-void Animal::makeSound() const{
-        std::cout << "Some animal sound!" << std::endl; 
-}

@@ -16,6 +16,6 @@ WrongCat &WrongCat::operator=(const WrongCat &copy){
     return *this;
 }
 
-void WrongCat::makeSound(){ 
+void WrongCat::makeSound() const{ 
         std::cout << "Meow!" << std::endl; 
 }
