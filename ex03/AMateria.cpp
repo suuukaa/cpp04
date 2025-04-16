@@ -18,3 +18,6 @@ std::string const &AMateria::getType() const{
     return type;
 }
 
+void AMateria::use(ICharacter& target){
+    std::cout << "use" << target.getName() << std::endl;
+}
