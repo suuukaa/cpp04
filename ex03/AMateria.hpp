@@ -11,6 +11,7 @@ class AMateria
 
     public:
         AMateria();
+        AMateria(const AMateria &copy);
         AMateria(std::string const & type);
         AMateria &operator=(const AMateria &copy);
         virtual ~AMateria();

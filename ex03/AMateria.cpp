@@ -4,6 +4,8 @@ AMateria::AMateria(){}
 
 AMateria::AMateria(std::string const & type) :  type(type){}
 
+AMateria::AMateria(const AMateria &copy) : type(copy.type) {}
+
 AMateria &AMateria::operator=(const AMateria &copy){
     
     if (this != &copy){

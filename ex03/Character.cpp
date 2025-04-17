@@ -58,13 +58,12 @@ void Character::equip(AMateria* m){
     if (!m)
         return ;
     for (int i = 0; i < 4; i++){
-        if (inventory[i])
+        if (inventory[i] == NULL){
             inventory[i] = m;
             return;
+        }
     }
-    std::cout << "Inventory is full, materia is not equipped"
-    << std::endl;
-
+    std::cout << "Inventory is full, materia is not equipped" << std::endl;
 }
 
 void Character::unequip(int idx){
