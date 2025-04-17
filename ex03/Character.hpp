@@ -10,8 +10,9 @@ class Character : public ICharacter{
         AMateria* inventory[4];
     public :
         Character();
+        Character(std::string const & name);
         Character(const Character &copy);
-        ~Character();
+        virtual ~Character();
         Character& operator=(const Character &copy);
 
         std::string const & getName() const;
