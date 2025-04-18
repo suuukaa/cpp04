@@ -2,13 +2,14 @@
 #include "AMateria.hpp"
 
 Character::Character() : name("Chaaracter"){
-    
+    this->index = 0;
     for (int i = 0; i < 4; i++){
         inventory[i] = NULL;
     }
 }
 
 Character::Character(std::string const & name) : name(name) {
+    this->index = 0;
     for (int i = 0; i < 4; i++)
         inventory[i] = NULL;
 }
@@ -57,13 +58,18 @@ std::string const & Character::getName() const{
 void Character::equip(AMateria* m){
     if (!m)
         return ;
+    if(index == 4){
+        std::cout << "Inventory is full, materia is not equipped" << std::endl;
+        return;
+    }
+
     for (int i = 0; i < 4; i++){
         if (inventory[i] == NULL){
+            index++;
             inventory[i] = m;
             return;
         }
     }
-    std::cout << "Inventory is full, materia is not equipped" << std::endl;
 }
 
 void Character::unequip(int idx){
