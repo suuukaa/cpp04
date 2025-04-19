@@ -22,7 +22,7 @@ Cat &Cat::operator=(const Cat &copy){
     }
     return *this;
 }
-makeSound
+
 void Cat::makeSound() const{ 
         std::cout << "Meow!" << std::endl; 
 }

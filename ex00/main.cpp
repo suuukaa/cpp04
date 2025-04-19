@@ -22,6 +22,11 @@ std::cout << I->getType() << " " << std::endl;
 I->makeSound(); //will output the cat sound!
 Meta->makeSound();
 
+delete j;
+delete i;
+delete meta;
+delete I;
+delete Meta;
 
 return 0;
 }
