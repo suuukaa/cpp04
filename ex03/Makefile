@@ -8,7 +8,7 @@ all: $(NAME)
 
 OBJ = $(SRC:.cpp=.o)
 
-%.o: %.cpp AMateria.hpp Ice.hpp Cure.hpp character.hpp ICharachter.hpp MateriaSource.hpp IMateriaSource.hpp
+%.o: %.cpp AMateria.hpp  Character.hpp  Cure.hpp  ICharacter.hpp  IMateriaSource.hpp  Ice.hpp  MateriaSource.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

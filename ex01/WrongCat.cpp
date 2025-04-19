@@ -4,7 +4,7 @@ WrongCat::WrongCat(){
     type = "WrongCat";
 }
 
-WrongCat::WrongCat(const WrongCat &copy){
+WrongCat::WrongCat(const WrongCat &copy) : WrongAnimal(copy){
     type = copy.type;
 }
 

@@ -5,7 +5,7 @@ Cat::Cat(){
     type = "Cat";
 }
 
-Cat::Cat(const Cat &copy){
+Cat::Cat(const Cat &copy) : Animal(copy){
     CatBrain = new Brain(*copy.CatBrain);
     type = copy.type;
 }

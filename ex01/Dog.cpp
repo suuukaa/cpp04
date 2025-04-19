@@ -5,7 +5,7 @@ Dog::Dog(){
     type = "Dog";
 }
 
-Dog::Dog(const Dog &copy){
+Dog::Dog(const Dog &copy) : Animal(copy){
     DogBrain = new Brain(*copy.DogBrain);
     type = copy.type;
 }

@@ -18,10 +18,6 @@ int main()
     me->use(0, *bob);
     me->use(1, *bob);
 
-    me->unequip(1);
-    me->unequip(3);
-    me->unequip(2);
-    me->unequip(0);
     delete bob;
     delete me;
     delete src;

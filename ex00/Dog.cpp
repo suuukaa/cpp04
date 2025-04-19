@@ -6,7 +6,7 @@ Dog::Dog(){
     type = "Dog";
 }
 
-Dog::Dog(const Dog &copy){
+Dog::Dog(const Dog &copy) : Animal(){
     type = copy.type;
 }
 
