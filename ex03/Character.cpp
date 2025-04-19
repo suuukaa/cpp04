@@ -63,14 +63,11 @@ void Character::equip(AMateria* m){
         return;
     }
 
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 4; i++){
         if (inventory[i] == m) {
             std::cout << "Materia already equipped" << std::endl;
             return;
-        }
-    }
-
-    for (int i = 0; i < 4; i++){
+        }   
         if (inventory[i] == NULL){
             index++;
             inventory[i] = m;
